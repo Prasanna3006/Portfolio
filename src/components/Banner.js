@@ -58,7 +58,6 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Prasanna`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Shopify Developer", "E-commerce Solutions Expert ]'><span className="wrap">{text}</span></span></h1>
                   <p>I specialize in creating custom Shopify themes, integrating apps, and optimizing storefronts to deliver seamless e-commerce experiences. With expertise in Liquid coding and API integrations, I help businesses build, scale, and enhance their online presence. Let’s connect to create a store that drives results!</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
