@@ -653,6 +653,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer img {
   width: 26%;
 }
+
 .footer p {
   font-weight: 600;
   font-size: 14px;
@@ -660,3 +661,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/* Center the contact details on mobile screens */
+@media screen and (max-width: 768px) {
+  .footer .contact-details {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item svg {
+    margin-bottom: 5px;
+    margin-right: 0; /* Remove right margin for centered alignment */
+  }
+
+  .footer img {
+    width: 40%; /* Adjust image size for smaller screens */
+  }
+
+  .footer p {
+    font-size: 12px; /* Adjust text size for better readability on mobile */
+  }
+}
+
