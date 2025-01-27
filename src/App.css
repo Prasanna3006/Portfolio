@@ -545,7 +545,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/Footer\ Bg.png');
+  background: linear-gradient(to right, #243B55, #000000);;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -681,6 +681,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .footer img {
     width: 40%; /* Adjust image size for smaller screens */
+  }
+  .footer h3 {
+  text-align: center;
+  }
+  .contact {
+      padding: 60px 0 100px 0;
   }
 
   .footer p {
