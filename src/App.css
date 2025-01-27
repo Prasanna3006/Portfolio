@@ -151,7 +151,9 @@ span.navbar-text {
 }
 .navbar-text button {
   margin-left: 18px;
-  padding: 15px;
+  padding: 18px 34px;
+  font-size: 18px;
+  font-weight: 700;
   border: none;
   outline: none;
   color: #FFF;
@@ -550,7 +552,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0.8;
 }
 .contact form button {
-  padding: 15px;
+  padding: 18px 34px;
+  font-size: 18px;
+  font-weight: 700;
   border: none;
   outline: none;
   color: #FFF;
