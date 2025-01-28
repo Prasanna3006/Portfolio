@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,7 +10,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Shopify Developer", "E-commerce Solutions Expert" ];
+  const toRotate = [ "Shopify Developer", "Web Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -51,12 +50,12 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={6}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Prasanna`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Shopify Developer", "E-commerce Solutions Expert ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Prasanna,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Shopify Developer", "Web Developer ]'><span className="wrap">{text}</span></span></h1>
                   <p>I specialize in creating custom Shopify themes, integrating apps, and optimizing storefronts to deliver seamless e-commerce experiences. With expertise in Liquid coding and API integrations, I help businesses build, scale, and enhance their online presence. Let’s connect to create a store that drives results!</p>
               </div>}
             </TrackVisibility>
