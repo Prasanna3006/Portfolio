@@ -1,64 +1,73 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import React, { Component } from 'react';
 
-export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+// IconScout SVG URLs
+const skills = [
+  { 
+    name: 'HTML 5', 
+    iconUrl: 'https://cdn.iconscout.com/icon/free/png-512/html5-40-1175193.png', 
+    color: '#fff' 
+  },
+  { 
+    name: 'CSS 3', 
+    iconUrl: 'https://cdn.iconscout.com/icon/free/png-512/css3-11-1175239.png', 
+    color: '#fff' 
+  },
+  { 
+    name: 'Bootstrap', 
+    iconUrl: 'https://cdn.iconscout.com/icon/free/png-512/bootstrap-226077.png', 
+    color: '#fff' 
+  },
+  { 
+    name: 'React', 
+    iconUrl: 'https://cdn.iconscout.com/icon/free/png-512/react-3-1175109.png', 
+    color: '#fff' 
+  },
+  { 
+    name: 'Shopify', 
+    iconUrl: 'https://cdn.iconscout.com/icon/free/png-512/shopify-226579.png', 
+    color: '#fff' 
+  },
+  { 
+    name: 'WordPress', 
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/174/174881.png',
+    color: '#fff' 
+  },
+  { 
+    name: 'Framer', 
+    iconUrl: 'https://framerusercontent.com/images/TvJ9grdPgk3sRz6T6XwkpBrFr4k.png?scale-down-to=512', 
+    color: '#fff' 
+  }
+];
 
-  return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Developed and customized Shopify stores for various clients,<br></br> ensuring user-friendly design and seamless e-commerce functionality.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Shopify Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Wordpress Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+class Skills extends Component {
+  render() {
+    return (
+      <div id="skills">
+        <div className="col-md-12">
+          <div className="col-md-12">
+            <h2 className="section-title">
+              <span className="text-white">SKILLS</span>
+            </h2>
+          </div>
+          <div className="col-md-12 text-center">
+            <div className="skill-icon">
+              {skills.map((skill, index) => (
+                <div key={index} className="skills-tile" style={{ '--order': index + 1 }}>
+                  <img 
+                    src={skill.iconUrl} 
+                    alt={skill.name} 
+                    width="50" 
+                    style={{ filter: 'drop-shadow(2px 4px 6px rgba(0,0,0,0.2))' }} 
+                  />
+                  <p style={{ color: skill.color }}>{skill.name}</p>
                 </div>
+              ))}
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
-    </section>
-  )
+      </div>
+    );
+  }
 }
+
+export default Skills;

@@ -796,6 +796,189 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: bold;
 }
 
+
+/* Skills Section Styles */
+#skills {
+  background: #1a1a1a;
+  min-height: 200px;
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.skill-icon {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skills-tile {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 25px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Wave Animation for Icons */
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.skills-tile {
+  animation: floating 4s ease-in-out infinite;
+  animation-delay: calc(var(--order) * 0.5s);
+}
+
+.skills-tile:hover {
+  animation: none;
+  transform: scale(1.1);
+  background: #333333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.skills-tile i {
+  font-size: 50px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: inline-block;
+  animation: wave 3s ease-in-out infinite;
+  animation-delay: calc(var(--order) * 0.3s);
+}
+
+.skills-tile:hover i {
+  animation: none;
+  transform: scale(1.1);
+}
+
+.skills-tile p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Apply different animation delays to create a wave effect */
+.skills-tile:nth-child(1) { --order: 1; }
+.skills-tile:nth-child(2) { --order: 2; }
+.skills-tile:nth-child(3) { --order: 3; }
+.skills-tile:nth-child(4) { --order: 4; }
+.skills-tile:nth-child(5) { --order: 5; }
+.skills-tile:nth-child(6) { --order: 6; }
+.skills-tile:nth-child(7) { --order: 7; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skill-icon {
+    gap: 20px;
+  }
+
+  .skills-tile {
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .skills-tile i {
+    font-size: 40px;
+  }
+
+  .skills-tile p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-tile {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  .skills-tile i {
+    font-size: 35px;
+  }
+
+  .skills-tile p {
+    font-size: 11px;
+  }
+}
+
+/* Optional: Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .skills-tile, .skills-tile i {
+    animation: none;
+  }
+}
+
+
 /* Center the contact details on mobile screens */
 @media screen and (max-width: 768px) {
   .footer .contact-details {
